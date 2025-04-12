@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-ai-openrouter-demo
+
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+  ai:
+    openai:
+      base-url: https://openrouter.ai/api
+      api-key: { OPEN_ROUTER_API_KEY }
+      chat:
+        options:
+#          model: meta-llama/llama-4-maverick:free
+          model: google/gemini-2.5-pro-exp-03-25:free
+
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          client: trace
