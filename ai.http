@@ -1,0 +1,16 @@
+### ChatController REST Client for Spring Boot
+
+# POST /chat
+POST http://localhost:8080/chat
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="files"; filename="chrome_UySGEEWfFc.png"
+Content-Type: text/plain
+
+< E:\Screenshots\Screenshots\2025-06\chrome_UySGEEWfFc.png
+--boundary
+Content-Disposition: form-data; name="question"
+
+What is in the file?
+--boundary--

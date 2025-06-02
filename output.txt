@@ -1,0 +1,39 @@
+RagApp.java ->
+
+=== Basic RAG Application with Spring AI ===
+Chat Model via OpenRouter, Embeddings via local HuggingFace Transformers.
+Using VectorStore: SimpleVectorStore
+Using ChatClient configured with RAG advisor.
+Ask questions about Spring AI, Paris, Mars, or early computers.
+Example: 'What is Spring AI?' or 'Tell me about Paris.'
+
+Your question (or type 'exit' to quit): what is spring ai?
+INFO: Searching for relevant documents using local embeddings...
+INFO: Found 1 document(s) to use as context:
+  - The Spring AI project aims to simplify the development of applications that inco...
+INFO: Sending question to AI (OpenRouter) with retrieved context...
+2025-06-02T07:52:33.760+05:30 DEBUG 19124 --- [spring-ai-openrouter-demo] [           main] o.s.web.client.DefaultRestClient         : Writing [ChatCompletionRequest[messages=[ChatCompletionMessage[rawContent=Context information is below.
+
+---------------------
+The Spring AI project aims to simplify the development of applications that incorporate artificial intelligence functionality without unnecessary complexity.
+---------------------
+
+Given the context information and no prior knowledge, answer the query.
+
+Follow these rules:
+
+1. If the answer is not in the context, just say that you don't know.
+2. Avoid statements like "Based on the context..." or "The provided information...".
+
+Query: what is spring ai?
+
+Answer:
+, role=USER, name=null, toolCallId=null, toolCalls=null, refusal=null, audioOutput=null]], model=deepseek/deepseek-prover-v2:free, store=null, metadata=null, frequencyPenalty=null, logitBias=null, logprobs=null, topLogprobs=null, maxTokens=null, maxCompletionTokens=null, n=null, outputModalities=null, audioParameters=null, presencePenalty=null, responseFormat=null, seed=null, serviceTier=null, stop=null, stream=false, streamOptions=null, temperature=0.7, topP=null, tools=null, toolChoice=null, parallelToolCalls=null, user=null, reasoningEffort=null]] as "application/json" with org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
+2025-06-02T07:52:37.435+05:30 DEBUG 19124 --- [spring-ai-openrouter-demo] [           main] o.s.web.client.DefaultRestClient         : Reading to [org.springframework.ai.openai.api.OpenAiApi$ChatCompletion]
+
+AI Response:
+Spring AI is a framework that simplifies the integration of artificial intelligence (AI) functionality into applications. It provides abstractions and infrastructure to make it easier for developers to use AI models and services in their projects. The framework is designed to be easy to use and understand, allowing developers to focus on the AI aspects of their applications without getting bogged down in the complexities of the underlying AI technologies. Spring AI is built on top of the Spring Framework, which is a popular framework for building enterprise applications in Java. The Spring AI project is developed and maintained by the Spring team, and it is released under the Apache License 2.0.
+
+Your question (or type 'exit' to quit): exit
+
+Exiting RAG application.

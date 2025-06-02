@@ -1,0 +1,4 @@
+//DEPS org.springframework.boot:spring-boot-starter:3.2.0
+//DEPS org.springframework.ai:spring-ai-openai-spring-boot-starter:1.0.0-M6
+//DEPS org.springframework.ai:spring-ai-transformers-spring-boot-starter:1.0.0-M6
+//DEPS org.springframework.ai:spring-ai-advisors-vector-store:1.0.0-M8
